@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import {AlurakutStyles} from '../src/componentes/lib/CommonsAlura'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -18,6 +19,8 @@ body {
   min-height: 110vh;
   flex-direction: column;
 }  
+
+${AlurakutStyles}
 `
 
 const theme = {
@@ -27,10 +30,11 @@ const theme = {
 }
 
 export default function App({ Component, pageProps }) {
+  console.log( AlurakutStyles )
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
     </>

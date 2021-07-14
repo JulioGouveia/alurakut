@@ -234,6 +234,9 @@ AlurakutProfileSidebarMenuDefault.Wrapper = styled.div`
       margin-right: 5px; 
     }
   }
+  nav {
+      padding: 10px 0 ;
+  }
 `;
 
 // ================================================================================================================
