@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 body {
     
     font-family: sans-serif;
-    background-color: #483D8B;
+    background-color: #D9E6F6
   }
 
 #_next {
@@ -30,7 +30,6 @@ const theme = {
 }
 
 export default function App({ Component, pageProps }) {
-  console.log( AlurakutStyles )
   return (
     <>
       <GlobalStyle />
