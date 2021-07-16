@@ -49,4 +49,28 @@ export const ProfileRelationsBoxWrapper = styled(Box)`
       background-image: linear-gradient(0deg,#00000073,transparent);
     }
   }
-`; 
+`;
+
+export function ProfileRelationsBoxConstructor(props) {
+  return ( 
+    <ProfileRelationsBoxWrapper>
+      <h2 className="smallTitle">{props.title} ({props.itens.length})</h2>
+      <ul>
+        {props.itens.slice(0, 6).map((itemAtual) => { 
+          return (
+            <li key={itemAtual.id}>
+              <a href={`/users/${itemAtual.title}`} key={itemAtual.title} >
+                  <img src={itemAtual.img}></img>
+                  <span>{itemAtual.title}</span>
+              </a>
+            </li>
+          ) 
+        })}
+      </ul>
+      <hr></hr>
+      <a className="boxLink">Ver todos</a>
+    </ProfileRelationsBoxWrapper>
+  );
+}
+
+
